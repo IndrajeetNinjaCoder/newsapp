@@ -1,0 +1,6 @@
+API key:
+0e45028b4ff34768ab9dee2fc3e68b1b
+
+
+you can search by using q=serarchQury
+https://newsapi.org/v2/top-headlines?apiKey=0e45028b4ff34768ab9dee2fc3e68b1b&q=cricket
