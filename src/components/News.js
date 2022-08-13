@@ -10,7 +10,6 @@ const News = (props) => {
     const [loading, setLoading] = useState(true)
     const [page, setPage] = useState(1)
     const [totalResults, setTotalResults] = useState(0)
-    // document.title = `${capitalizeFirstLetter(props.category)} - NewsMonkey`;
 
     const capitalizeFirstLetter = (string) => {
         return string.charAt(0).toUpperCase() + string.slice(1);
@@ -41,6 +40,7 @@ const News = (props) => {
 
 
     useEffect(() => {
+    document.title = `${capitalizeFirstLetter(props.category)} - NewsMonkey`;
         updatePage();
         // eslint-disable-next-line
     }, [])
@@ -84,7 +84,7 @@ const News = (props) => {
             <InfiniteScroll
                 dataLength = {articles.length}
                 next={fetchMoreData}
-                hasMore={articles.length() !== totalResults}
+                hasMore={articles.length !== totalResults}
                 loader={<Spinner />}
             >
                 <div className="container">
